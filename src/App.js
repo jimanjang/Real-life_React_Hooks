@@ -1,21 +1,12 @@
-import React, { useState } from "react";
-import ReactDOM from "react-dom";
-
+import React from "react";
 import "./styles.css";
 
-const App = () => {
-  const [item, setItem] = useState(1);
-  const incrementItem = () => setItem(item + 1);
-  const decrementItem = () => setItem(item - 1);
+//Get ready for a code review.
+export default function App() {
   return (
     <div className="App">
-      <h1>Hello {item}</h1>
+      <h1>Hello CodeSandbox</h1>
       <h2>Start editing to see some magic happen!</h2>
-      <button onClick={incrementItem}>Increment</button>
-      <button onClick={decrementItem}>Decrement</button>
     </div>
   );
-};
-
-const rootElement = document.getElementById("root");
-ReactDOM.render(<App />, rootElement);
+}
