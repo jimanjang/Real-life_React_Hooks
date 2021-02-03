@@ -1,8 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
 import "./styles.css";
 
-//Get ready for a code review.
 export default function App() {
+  const [item, setItem] = useState(1);
   return (
     <div className="App">
       <h1>Hello CodeSandbox</h1>
