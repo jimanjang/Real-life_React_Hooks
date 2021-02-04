@@ -3,16 +3,20 @@ import ReactDOM from "react-dom";
 
 import "./styles.css";
 
+const useInput = (initialValue) => {
+  const [value, setValue] = useState(initialValue);
+  const onChange = (event) => {
+    console.log(event.target);
+  };
+  return { value, onChange };
+};
+
 const App = () => {
-  const [item, setItem] = useState(1);
-  const incrementItem = () => setItem(item + 1);
-  const decrementItem = () => setItem(item - 1);
+  const name = useInput("Mr.");
   return (
     <div className="App">
-      <h1>Hello {item}</h1>
-      <h2>Start editing to see some magic happen!</h2>
-      <button onClcik={incrementItem}>Increment</button>
-      <button onClcik={decrementItem}>Decrement</button>
+      <h1>Hello </h1>
+      <input placeholder="Name" {...name} />
     </div>
   );
 };
